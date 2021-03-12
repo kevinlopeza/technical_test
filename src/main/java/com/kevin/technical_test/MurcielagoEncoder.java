@@ -13,9 +13,7 @@ public class MurcielagoEncoder implements Encoder {
 
     private final char[] key = {'M', 'U', 'R', 'C', 'I', 'E', 'L', 'A', 'G', 'O'};
     
-    public MurcielagoEncoder() { 
-        System.out.println("Murciélago encoder creado.");
-    }
+    public MurcielagoEncoder() { }
     
     @Override
     public void encode(String text) {
