@@ -5,6 +5,7 @@
  */
 package com.kevin.technical_test;
 
+import java.util.Scanner;
 import java.util.Set;
 import org.reflections.Reflections;
 
@@ -16,12 +17,15 @@ public class Main {
 
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         
-        String toEncode = "Kennia";
+        Scanner myObj = new Scanner(System.in); 
+        System.out.println("Enter a word to encode");
+
+        String toEncode = myObj.nextLine(); 
         
+        //We'll use Reflections to get the classes that implement Encoder in this package
         Reflections reflections = new Reflections("com.kevin.technical_test");
         
-        
-        //We get all implementations of Encoder in this package
+        //We get all implementations of Encoder
         Set<Class<? extends Encoder>> classes = reflections.getSubTypesOf(Encoder.class);
         
         
